@@ -6,40 +6,46 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">
-                    Lista de Tareas
+                    Tareas Pendientes
                 </div>
                 <div class="card-body">
                     <div class="todo-list">
-                        <ul class="list-group">
+                        <ul id="list" class="list-group">
                             <li class="list-group-item">
-                                <label>
+                                <label class="container-checkbox">
                                     <input type="checkbox">
-                                    <label for="packers" class="strikethrough">22,Dec Publish The Final
-                                        Exam Result</label>
-                                    <a href='#' class="ti-close"></a>
+                                    <label class="strikethrough">Dato de prueba 1</label>
+                                    <span class="checkmark"></span>
                                 </label>
                             </li>
                             <div class="p-1"></div>
                             <li class="list-group-item">
-                                <label>
+                                <label class="container-checkbox">
                                     <input type="checkbox">
-                                    <label for="packers" class="strikethrough">22,Dec Publish The Final
-                                        Exam Result</label>
-                                    <a href='#' class="ti-close"></a>
+                                    <label class="strikethrough">Dato de prueba 2</label>
+                                    <span class="checkmark"></span>
                                 </label>
                             </li>
                             <div class="p-1"></div>
                             <li class="list-group-item">
-                                <label>
+                                <label class="container-checkbox">
                                     <input type="checkbox">
-                                    <label for="packers" class="strikethrough">22,Dec Publish The Final
-                                        Exam Result</label>
-                                    <a href='#' class="ti-close"></a>
+                                    <label class="strikethrough">Dato de prueba 3</label>
+                                    <span class="checkmark"></span>
                                 </label>
                             </li>
-                            <div class="p-2"></div>
                         </ul>
-                        <input type="text" class="tdl-new form-control" placeholder="Write new item and hit 'Enter'...">
+                        <div class="p-2"></div>
+                        <input type="text" id="input_add" class="tdl-new form-control" placeholder="Write new item and hit 'Enter'...">
+                    </div>
+                </div>
+                <div class="row pb-3 px-3">
+                    <div class="col-6"></div>
+                    <div class="col-3">
+                        <button type="button" class="btn btn-outline-dark float-end">Eliminar Marcados</button>
+                    </div>
+                    <div class="col-3">
+                        <button type="button" class="btn btn-outline-danger float-end">Eliminar Todos</button>
                     </div>
                 </div>
             </div>
