@@ -33,6 +33,11 @@ class User extends Authenticatable
         'remember_token',
     ];
 
+    public function tareas()
+    {
+        return $this->hasMany(Tarea::class);
+    }
+
     /**
      * The attributes that should be cast.
      *

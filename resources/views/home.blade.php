@@ -6,7 +6,7 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">
-                    Tareas Pendientes
+                    Mis Tareas Pendientes
                 </div>
                 <div class="card-body">
                     <div class="todo-list">
@@ -36,7 +36,7 @@
                             </li>
                         </ul>
                         <div class="p-2"></div>
-                        <input type="text" id="input_add" class="tdl-new form-control" placeholder="Write new item and hit 'Enter'...">
+                        <input type="text" id="input_add" class="tdl-new form-control" placeholder="Para agregar una nueva tarea presione la tecla 'Enter'...">
                     </div>
                 </div>
                 <div class="row pb-3 px-3">
