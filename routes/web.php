@@ -13,11 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Auth::routes();
 
 Route::post('/tarea', [App\Http\Controllers\TareasController::class, 'store']);
+Route::get('/tarea/{tarea}/edit', [App\Http\Controllers\TareasController::class, 'edit'])->name('tareas.edit');
+Route::patch('/tarea/{tarea}', [App\Http\Controllers\TareasController::class, 'update']);
+Route::delete('/tarea/{tarea}', [App\Http\Controllers\TareasController::class, 'delete']);
 Route::get('/', [App\Http\Controllers\TareasController::class, 'index'])->name('tareas.show');
