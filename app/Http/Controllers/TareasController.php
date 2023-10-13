@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Auth;
 
 class TareasController extends Controller
 {
@@ -22,9 +23,10 @@ class TareasController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index($usuario)
+    public function index()
     {
-        $usuario = User::find($usuario);
+        $usuarioId = Auth::id();
+        $usuario = User::find($usuarioId);
         return view('home', ['usuario' => $usuario,]);
     }
 }

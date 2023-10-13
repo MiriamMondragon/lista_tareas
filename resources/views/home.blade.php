@@ -6,7 +6,7 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">
-                    Mis Tareas Pendientes
+                    Mis Tareas Pendientes - {{$usuario->name}}
                 </div>
                 <div class="card-body">
                     <div class="todo-list">

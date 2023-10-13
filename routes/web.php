@@ -19,4 +19,4 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/tareas/{usuario}', [App\Http\Controllers\TareasController::class, 'index'])->name('tareas.show');
+Route::get('/', [App\Http\Controllers\TareasController::class, 'index'])->name('tareas.show');
