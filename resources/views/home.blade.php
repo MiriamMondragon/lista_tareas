@@ -19,7 +19,7 @@
                                         <input type="checkbox" name="check[]" value="{{ $tarea->id }}">
                                         <label class="strikethrough">{{ $tarea->descripcion }}</label>
                                         <span class="checkmark"></span>
-                                            <a href="/tarea/{{$tarea->id}}/edit"><i class="bi bi-pen float-end" style="color: red"></i></a>
+                                            <a href="/tarea/{{$tarea->id}}/edit"><i class="bi bi-pen float-end" style="color: gray"></i></a>
                                     </label>
                                 </li>
                                 <div class="p-1"></div>

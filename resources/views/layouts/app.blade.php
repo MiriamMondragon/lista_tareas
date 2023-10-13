@@ -7,7 +7,8 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Lista de Tareas</title>
+    <link rel="icon" href="{{ url('assets/icon.ico') }}">
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
@@ -17,12 +18,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     @vite(['resources/sass/app.scss', 'resources/js/app.js', 'resources/css/app.scss'])
 </head>
-<body>
+<body id="page-container">
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    Lista de Quehaceres
+                    Lista de Tareas
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -73,9 +74,14 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="py-4" id="content-wrap">
             @yield('content')
         </main>
     </div>
+    <footer id="footer" class="text-center text-lg-start bg-light text-muted">
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2023 Copyright: <b>Miriam Mondragón</b>
+          </div>
+    </footer>
 </body>
 </html>

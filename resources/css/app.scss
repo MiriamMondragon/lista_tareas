@@ -69,3 +69,19 @@ input[type=checkbox]:checked + label.strikethrough{
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
   }
+
+  #page-container {
+    position: relative;
+    min-height: 100vh;
+  }  
+
+  #content-wrap {
+    padding-bottom: 0.5rem;
+  }
+
+  #footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 0.5rem;
+  }
