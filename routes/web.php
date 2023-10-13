@@ -19,4 +19,5 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::post('/tarea', [App\Http\Controllers\TareasController::class, 'store']);
 Route::get('/', [App\Http\Controllers\TareasController::class, 'index'])->name('tareas.show');

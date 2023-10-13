@@ -25,8 +25,21 @@ class TareasController extends Controller
      */
     public function index()
     {
-        $usuarioId = Auth::id();
-        $usuario = User::find($usuarioId);
-        return view('home', ['usuario' => $usuario,]);
+        $userId = Auth::id();
+        $user = User::findOrFail($userId);
+        return view('home', ['user' => $user,]);
+    }
+
+    public function store()
+    {
+        $data = request()->validate([
+            'descripcion' => 'required',
+        ]);
+
+        auth()->user()->tareas()->create($data);
+        
+        $userId = Auth::id();
+        $user = User::findOrFail($userId);
+        return view('home', ['user' => $user,]);
     }
 }

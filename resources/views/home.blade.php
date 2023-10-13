@@ -6,48 +6,41 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">
-                    Mis Tareas Pendientes - {{$usuario->name}}
+                    Mis Tareas Pendientes
                 </div>
-                <div class="card-body">
-                    <div class="todo-list">
-                        <ul id="list" class="list-group">
-                            <li class="list-group-item">
-                                <label class="container-checkbox">
-                                    <input type="checkbox">
-                                    <label class="strikethrough">Dato de prueba 1</label>
-                                    <span class="checkmark"></span>
-                                </label>
-                            </li>
+                <form action="/tarea" method="POST">
+                    @csrf
+                    <div class="card-body">
+                        <div class="todo-list">
+                            <ul id="list" class="list-group">
+                                @foreach($user->tareas as $tarea)
+                                <li class="list-group-item">
+                                    <label class="container-checkbox">
+                                        <input type="checkbox" name="check{{ $tarea->id }}">
+                                        <label class="strikethrough">{{ $tarea->descripcion }}</label>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </li>
+                                <div class="p-1"></div>
+                                @endforeach
+                            </ul>
                             <div class="p-1"></div>
-                            <li class="list-group-item">
-                                <label class="container-checkbox">
-                                    <input type="checkbox">
-                                    <label class="strikethrough">Dato de prueba 2</label>
-                                    <span class="checkmark"></span>
-                                </label>
-                            </li>
-                            <div class="p-1"></div>
-                            <li class="list-group-item">
-                                <label class="container-checkbox">
-                                    <input type="checkbox">
-                                    <label class="strikethrough">Dato de prueba 3</label>
-                                    <span class="checkmark"></span>
-                                </label>
-                            </li>
-                        </ul>
-                        <div class="p-2"></div>
-                        <input type="text" id="input_add" class="tdl-new form-control" placeholder="Para agregar una nueva tarea presione la tecla 'Enter'...">
+                            <input type="text" id="input_add" name="descripcion" class="tdl-new form-control @error('descripcion') is-invalid @enderror" placeholder="Para agregar una nueva tarea presione la tecla 'Enter'...">
+                            @error('descripcion')
+                                <p style="font-weight: bold; color: rgb(190, 21, 21); font-size: 12px">La descripción de la tarea es necesaria.</p>
+                            @enderror
+                        </div>
                     </div>
-                </div>
-                <div class="row pb-3 px-3">
-                    <div class="col-6"></div>
-                    <div class="col-3">
-                        <button type="button" class="btn btn-outline-dark float-end">Eliminar Marcados</button>
+                    <div class="row pb-3 px-3">
+                        <div class="col-6"></div>
+                        <div class="col-3">
+                            <button type="button" class="btn btn-outline-dark float-end">Eliminar Marcados</button>
+                        </div>
+                        <div class="col-3">
+                            <button type="button" class="btn btn-outline-danger float-end">Eliminar Todos</button>
+                        </div>
                     </div>
-                    <div class="col-3">
-                        <button type="button" class="btn btn-outline-danger float-end">Eliminar Todos</button>
-                    </div>
-                </div>
+                </form>
             </div>
         </div>
     </div>

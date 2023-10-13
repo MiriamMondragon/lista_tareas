@@ -7,7 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Tarea extends Model
 {
-    public function usuario()
+    protected $guarded = [];
+
+    public function user()
     {
         return $this->belongsTo(User::class);
     }
