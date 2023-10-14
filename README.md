@@ -9,7 +9,7 @@ Es posible utilizar el demo de la aplicación con el siguiente enlace [Proyecto 
 - Permite registrarse como usuario para la aplicación.
   ![Screenshot of the project.](/Images/1.PNG)
 - Pemite iniciar sesión para ver la lista de tareas pertinentes para el usuario.
-- ![Screenshot of the project.](/Images/2.PNG)
+  ![Screenshot of the project.](/Images/2.PNG)
 - Permite guardar tareas en la base de datos para su persistencia.
 - Permite editar tareas mediante un update de la descripción de la misma.
   ![Screenshot of the project.](/Images/3.PNG)
